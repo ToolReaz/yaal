@@ -2,23 +2,13 @@ const path = require("path");
 
 const { app, BrowserWindow } = require("electron");
 const isDev = require("electron-is-dev");
+const { registerShortcuts } = require("./utils/shortcutListener");
 
-function createWindow() {
+function createMainWindow() {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    title: "Yaal",
-    webPreferences: {
-      nodeIntegration: true,
-      enableRemoteModule: true,
-      contextIsolation: false,
-      preload: path.join(__dirname, "preload.js"),
-    },
-  });
+  const mainWindow = new BrowserWindow();
 
-  // and load the index.html of the app.
-  // win.loadFile("index.html");
+  // Load either built html file or live server
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
@@ -33,7 +23,10 @@ function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.whenReady().then(createWindow);
+app.whenReady().then(() => {
+  registerShortcuts();
+  createMainWindow();
+});
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
