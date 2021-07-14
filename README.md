@@ -1,7 +1,7 @@
 # Yaal
 
 <div align="center">
-Yet Another Application Launcher
+<strong>Yet Another Application Launcher</strong>
 
 <br/>
 <br/>
@@ -10,8 +10,10 @@ Yet Another Application Launcher
 ![GitHub last commit](https://img.shields.io/github/last-commit/toolreaz/yaal?style=for-the-badge&color=blue&logo=Github)
 ![GitHub Repo stars](https://img.shields.io/github/stars/toolreaz/yaal?color=yellow&style=for-the-badge)
 
+<br/>
+<br/>
+
 </div>
- <hr/>
 
 ## What is Yaal ?
 
