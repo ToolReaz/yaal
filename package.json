@@ -10,7 +10,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "electron-is-dev": "^2.0.0",
+    "electron": "^13.1.6"
   },
   "build": {
     "appId": "io.yaal"
@@ -46,9 +48,7 @@
   "devDependencies": {
     "concurrently": "^6.2.0",
     "cross-env": "^7.0.3",
-    "electron": "^13.1.6",
     "electron-builder": "^22.11.7",
-    "electron-is-dev": "^2.0.0",
     "wait-on": "^6.0.0"
   }
 }
